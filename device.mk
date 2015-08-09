@@ -17,10 +17,10 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/htc/himaul/himaul-vendor.mk)
+$(call inherit-product-if-exists, vendor/htc/b3uhl/b3uhl-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-# common hima
-$(call inherit-product, device/htc/hima-common/hima.mk)
+# common b3
+$(call inherit-product, device/htc/b3-common/b3.mk)
