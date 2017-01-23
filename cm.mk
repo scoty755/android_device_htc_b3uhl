@@ -7,6 +7,9 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
 PRODUCT_NAME := cm_b3uhl
+BOARD_VENDOR := htc
+TARGET_VENDOR := htc
+PRODUCT_DEVICE := b3uhl
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE="htc_b3uhl" \
