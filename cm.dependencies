@@ -1,6 +1,6 @@
 [
   {
-    "repository": "android_device_htc_hima-common",
-    "target_path": "device/htc/hima-common"
+    "repository": "android_device_htc_b3-common",
+    "target_path": "device/htc/b3-common"
   }
 ]

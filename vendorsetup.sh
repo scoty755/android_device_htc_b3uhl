@@ -1,1 +1,1 @@
-add_lunch_combo cm_himaul-userdebug
+add_lunch_combo cm_b3uhl-userdebug

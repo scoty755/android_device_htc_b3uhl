@@ -18,8 +18,8 @@
 set -e
 
 # Required!
-export DEVICE=himaul
-export DEVICE_COMMON=hima-common
+export DEVICE=b3uhl
+export DEVICE_COMMON=b3-common
 export VENDOR=htc
 
 ./../../$VENDOR/$DEVICE_COMMON/setup-makefiles.sh $@
