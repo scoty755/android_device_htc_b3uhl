@@ -17,7 +17,7 @@
 # inherit from b3-common
 -include device/htc/b3-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := htc_b3uhl,b3uhl,b3
+TARGET_OTA_ASSERT_DEVICE := htc_b3uhl,htc_himaul,b3uhl,b3
 
 # inherit from the proprietary version
 -include vendor/htc/b3uhl/BoardConfigVendor.mk
