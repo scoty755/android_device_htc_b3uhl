@@ -17,6 +17,9 @@
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/htc/b3uhl/b3uhl-vendor.mk)
 
+# FeliCa vendor tree
+$(call inherit-product-if-exists, vendor/htc/felica-common/felica-common-vendor.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
