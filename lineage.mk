@@ -1,6 +1,6 @@
 $(call inherit-product, device/htc/b3uhl/full_b3uhl.mk)
 
-# Inherit some common CM stuff.
+# Inherit some common Lineage stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Enhanced NFC
