@@ -1,7 +1,7 @@
 $(call inherit-product, device/htc/b3uhl/full_b3uhl.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 PRODUCT_NAME := lineage_b3uhl
 BOARD_VENDOR := htc
