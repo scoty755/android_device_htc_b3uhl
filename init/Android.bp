@@ -1,0 +1,5 @@
+cc_library_static {
+    name: "libinit_b3uhl",
+    include_dirs: ["system/core/base/include", "system/core/init"],
+    srcs: ["init_b3uhl.cpp"],
+}

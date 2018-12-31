@@ -1,0 +1,22 @@
+allow init { domain -lmkd -crash_dump }:process noatsecure;
+
+allow init proc_kernel_sched:file rw_file_perms;
+allow init proc_slabinfo:file setattr;
+
+allow init sysfs_battery_supply:file setattr;
+allow init sysfs_bluetooth_writable:file setattr;
+allow init sysfs_cir:file setattr;
+allow init sysfs_cpu_boost:file rw_file_perms;
+allow init sysfs_devfreq:file rw_file_perms;
+allow init sysfs_devices_system_cpu:file rw_file_perms;
+allow init sysfs_graphics:file setattr;
+allow init sysfs_keyboard:file setattr;
+allow init sysfs_msm_perf:file rw_file_perms;
+allow init sysfs_msm_power:file rw_file_perms;
+allow init sysfs_net:file rw_file_perms;
+allow init sysfs_sensors:file setattr;
+allow init sysfs_sensors:lnk_file r_file_perms;
+allow init sysfs_thermal:file rw_file_perms;
+allow init sysfs_touchscreen:file setattr;
+allow init sysfs_usb_uicc:file setattr;
+allow init sysfs_wlan_fwpath:file setattr;

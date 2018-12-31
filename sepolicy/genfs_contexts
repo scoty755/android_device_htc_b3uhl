@@ -1,0 +1,43 @@
+genfscon proc /bluetooth/sleep/lpm u:object_r:proc_bluetooth_writable:s0
+genfscon proc /bluetooth/sleep/btwrite u:object_r:proc_bluetooth_writable:s0
+genfscon proc /slabinfo u:object_r:proc_slabinfo:s0
+
+genfscon proc /sys/kernel/sched_migration_fixup u:object_r:proc_kernel_sched:s0
+
+genfscon proc /sys/kernel/sched_downmigrate u:object_r:proc_kernel_sched:s0
+genfscon proc /sys/kernel/sched_freq_dec_notify u:object_r:proc_kernel_sched:s0
+genfscon proc /sys/kernel/sched_freq_inc_notify u:object_r:proc_kernel_sched:s0
+genfscon proc /sys/kernel/sched_small_task u:object_r:proc_kernel_sched:s0
+genfscon proc /sys/kernel/sched_upmigrate u:object_r:proc_kernel_sched:s0
+
+genfscon sysfs /android_touch/glove_setting u:object_r:sysfs_touchscreen:s0
+
+genfscon sysfs /devices/platform/htc_battery/power_supply/ac u:object_r:sysfs_usb_supply:s0
+genfscon sysfs /devices/platform/htc_battery/power_supply/battery u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/soc.0/qcom,bcl.63 u:object_r:sysfs_thermal:s0
+genfscon sysfs /devices/soc.0/qpnp-fg-19/power_supply/bms u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/soc.0/msm-bcl-16/power_supply/fg_adc u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/soc.0/f9200000.ssusb/power_supply/usb u:object_r:sysfs_usb_supply:s0
+genfscon sysfs /devices/soc.0/f9967000.i2c/i2c-5/5-001c/power_supply/usb-parallel u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/htc_battery/power_supply/wireless u:object_r:sysfs_usb_supply:s0
+
+genfscon sysfs /devices/soc.0/fd900000.qcom,mdss_mdp/qcom,mdss_fb_primary.191/leds u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/soc.0/f9824900.sdhci/leds u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/soc.0/f98a4900.sdhci/leds u:object_r:sysfs_leds:s0
+
+genfscon sysfs /devices/soc.0/gpio_keys.87/vol_wakeup u:object_r:sysfs_keyboard:s0
+
+genfscon sysfs /devices/soc.0/leds-qpnp-26/leds u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/soc.0/qcom,camera-flash.91/leds u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/soc.0/qpnp-flash-led-27/leds u:object_r:sysfs_leds:s0
+
+genfscon sysfs /devices/soc.0/qcom,cpubw.34/devfreq u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/soc.0/qcom,gpubw.75/devfreq u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/soc.0/qcom,mincpubw.35/devfreq u:object_r:sysfs_devfreq:s0
+
+genfscon sysfs /devices/virtual/graphics/fb1/pa u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/virtual/graphics/fb1/video_mode u:object_r:sysfs_graphics:s0
+
+genfscon sysfs /devices/virtual/net/rmnet_ipa0/queues/rx-0/rps_cpus u:object_r:sysfs_net:s0
+
+genfscon sysfs /devices/virtual/optical_sensors/proximity u:object_r:sysfs_sensors:s0
