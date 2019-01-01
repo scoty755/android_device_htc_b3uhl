@@ -403,12 +403,6 @@ service vendor.energy-awareness /system/vendor/bin/energy-awareness
     group system
     oneshot
 
-service vendor.ipacm-diag /system/vendor/bin/ipacm-diag
-    class main
-    user system
-    socket ipacm_log_file dgram 660 system net_admin
-    group net_admin oem_2950
-
 service vendor.ipacm /system/vendor/bin/ipacm
     class main
     user net_admin
