@@ -81,7 +81,7 @@ void vendor_load_properties() {
     std::string device;
 
     bootmid = GetProperty("ro.boot.mid", "");
-    if (bootmid == "0PJA10000") {
+    if (bootmid == "0PL210000") {
         /* b3uhluhl */
         gsm_properties("9");
         property_override("ro.build.description", "2.44.970.1 CL810015 release-keys");
