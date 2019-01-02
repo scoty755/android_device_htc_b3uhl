@@ -32,20 +32,20 @@ htc.build.stage=2
 ro.aa.customizationid=3053789
 ro.aa.maincid=BS_US001
 ro.prot=true
-ro.aa.modelid=0PJA11000
-ro.aa.skulist=617
-ro.aa.rid=259
-ro.aa.cidlist=BS_US001,BS_US002
+ro.aa.modelid=0PL210000
+ro.aa.skulist=970
+ro.aa.rid=139
+ro.aa.cidlist=KDDI_801
 ro.aa.report=com
-ro.aa.project=HIMA_UL_N70_SENSE80_ATT_MR
-ro.aa.romver=4.30.617.12
-ro.aa.mainsku=617
+ro.aa.project=B3_UHL_M60_SENSE70_MR
+ro.aa.romver=2.44.970.1
+ro.aa.mainsku=970
 ro.onecid=1
-ro.aa.taskid=501592
-ro.cwkey=BS_US001
-ro.build.id=NRD90M
-ro.build.display.id=NRD90M release-keys
-ro.build.version.incremental=894012.12
+ro.aa.taskid=486082
+ro.cwkey=KDDI_801
+ro.build.id=MMB29M
+ro.build.display.id=MMB29M release-keys
+ro.build.version.incremental=810015.1
 ro.build.version.sdk=24
 ro.build.version.preview_sdk=0
 ro.build.version.codename=REL
@@ -57,13 +57,13 @@ ro.build.date=三  4月 12 12:37:27 CST 2017
 ro.build.date.utc=1491971847
 ro.build.type=user
 ro.build.user=buildteam
-ro.build.host=ABM103
+ro.build.host=ABM101
 ro.build.tags=release-keys
 ro.build.flavor=htc_himaulatt-user
 ro.product.model=MSM8994 for arm64
 ro.product.brand=htc
-ro.product.name=himaulatt_na_gen_unlock
-ro.product.device=htc_himaulatt
+ro.product.name=HTV31_jp_kdi
+ro.product.device=htc_b3uhl
 ro.product.board=msm8994
 # ro.product.cpu.abi and ro.product.cpu.abi2 are obsolete,
 # use ro.product.cpu.abilist instead.
@@ -72,23 +72,23 @@ ro.product.cpu.abilist=arm64-v8a,armeabi-v7a,armeabi
 ro.product.cpu.abilist32=armeabi-v7a,armeabi
 ro.product.cpu.abilist64=arm64-v8a
 ro.product.manufacturer=HTC
-ro.product.locale=en-US
+ro.product.locale=en-AU
 ro.wifi.channels=
 ro.board.platform=msm8994
 # ro.build.product is obsolete; use ro.product.device
-ro.build.product=htc_himaulatt
+ro.build.product=htc_b3uhl
 # Do not try to parse description, fingerprint, or thumbprint
-ro.build.description=4.30.617.12 CL894012 release-keys
+ro.build.description=2.44.970.1 CL810015 release-keys
 ro.build.fingerprint=htc/himaulatt_na_gen_unlock/htc_himaulatt:7.0/NRD90M/894012.12:user/release-keys
 ro.build.characteristics=default
-ro.build.description=4.30.617.12 CL894012 release-keys
+ro.build.description=2.44.970.1 CL810015 release-keys
 # Do not try to parse ro.build.description or .fingerprint
-ro.build.description=4.30.617.12 CL894012 release-keys
-ro.build.changelist=894012
-ro.build.project=HIMA_UL_N70_SENSE80_ATT_MR:501592
-ro.build.sku=NA Gen Unlock
-ro.build.buildline=HIMAULATT_GenericOC_WWE_N70_CRC_Sense80_Stable_MR
-ro.product.version=4.30.617.12
+ro.build.description=2.44.970.1 CL810015 release-keys
+ro.build.changelist=810015
+ro.build.project=B3_UHL_M60_SENSE70_MR:486082
+ro.build.sku=KDDI JP
+ro.build.buildline=B3UHL_KDDI_WWE_M601_CRC_Sense70_Stable_MR
+ro.product.version=2.44.970.1
 ro.build.languageremove=
 ro.build.sense.version=8.0
 Error of ro.build.version.htcsdk.
@@ -367,10 +367,10 @@ persist.radio.fill_eons=1
 # Property to disable IMS_DEBUG log
 # persist.ims.disableDebugLogs = 1
 # -SSD_RIL#
-# from device/htc/htc_hima/system.prop
+# from device/htc/htc_b3uhl/system.prop
 #
 #
-# system.prop for htc_hima
+# system.prop for htc_b3uhl
 #
 
 #
@@ -381,11 +381,11 @@ debug.egl.hw=1
 debug.composition.type=gpu
 persist.hwc.mdpcomp.enable=true
 ro.hwui.renderer.disable_opaque=true
-ro.sf.lcd_density=560
+ro.sf.lcd_density=640
 debug.mdpcomp.logs=0
 
 # Display Info
-ro.product.display_resolution = 5 inch 1080p resolution
+ro.product.display_resolution = 5.2 inch WQHD resolution
 
 #+SSD_RIL
 # for rmt_storage
