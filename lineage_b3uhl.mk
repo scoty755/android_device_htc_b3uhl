@@ -29,7 +29,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_DEVICE := b3uhl
-PRODUCT_NAME := full_b3uhl
+PRODUCT_NAME := lineage_b3uhl
 PRODUCT_BRAND := KDDI
 PRODUCT_MODEL := HTC J butterfly
 PRODUCT_MANUFACTURER := HTC
