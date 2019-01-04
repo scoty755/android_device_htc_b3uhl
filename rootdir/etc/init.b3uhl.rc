@@ -47,13 +47,17 @@ on init
 
     # Set permissions for persist partition
     mkdir /persist 0771 system system
+    # Set permissions for persist partition
+    mkdir /persist 0771 system system
+    mkdir /persist/data 0700 system system
 
     symlink /sdcard /storage/sdcard0
 
 on fs
-    wait /dev/block/platform/soc.0/${ro.boot.bootdevice}
-    symlink /dev/block/platform/soc.0/${ro.boot.bootdevice} /dev/block/bootdevice
-    mount_all fstab.b3uhl
+    mount_all fstab.qcom
+    restorecon_recursive /persist
+
+    mkdir /nfc_record 0740 system nfc
 
 on post-fs-data
     mkdir /data/tombstones 0771 system system

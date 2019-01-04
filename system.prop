@@ -32,7 +32,7 @@ ro.qualcomm.cabl=0
 ro.sf.lcd_density=420
 
 # Factory Reset Protection
-ro.frp.pst=/dev/block/platform/soc.0/f9824900.sdhci/by-name/frp
+ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # GPS
 persist.gps.qc_nlp_in_use=1

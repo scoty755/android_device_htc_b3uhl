@@ -30,12 +30,12 @@
 /sys/devices/soc.0/leds-qpnp-26/leds(/.*)?                          u:object_r:sysfs_leds:s0
 
 # Partitions
-/dev/block/platform/soc.0/f9824900.sdhci/by-name/cdma_record        u:object_r:modem_efs_partition_device:s0
-/dev/block/platform/soc.0/f9824900.sdhci/by-name/extra              u:object_r:metadata_block_device:s0
-/dev/block/platform/soc.0/f9824900.sdhci/by-name/frp                u:object_r:frp_block_device:s0
-/dev/block/platform/soc.0/f9824900.sdhci/by-name/modem_st1          u:object_r:modem_efs_partition_device:s0
-/dev/block/platform/soc.0/f9824900.sdhci/by-name/modem_st2          u:object_r:modem_efs_partition_device:s0
-/dev/block/platform/soc.0/f9824900.sdhci/by-name/rfg_[0-9]*         u:object_r:modem_efs_partition_device:s0
+/dev/block/bootdevice/by-name/cdma_record        u:object_r:modem_efs_partition_device:s0
+/dev/block/bootdevice/by-name/extra              u:object_r:metadata_block_device:s0
+/dev/block/bootdevice/by-name/frp                u:object_r:frp_block_device:s0
+/dev/block/bootdevice/by-name/modem_st1          u:object_r:modem_efs_partition_device:s0
+/dev/block/bootdevice/by-name/modem_st2          u:object_r:modem_efs_partition_device:s0
+/dev/block/bootdevice/by-name/rfg_[0-9]*         u:object_r:modem_efs_partition_device:s0
 
 # Sensors
 /data/misc/AccOffset.txt                                            u:object_r:sensors_data_file:s0
