@@ -79,7 +79,7 @@ ro.board.platform=msm8994
 ro.build.product=htc_b3uhl
 # Do not try to parse description, fingerprint, or thumbprint
 ro.build.description=2.44.970.1 CL810015 release-keys
-ro.build.fingerprint=htc/himaulatt_na_gen_unlock/htc_himaulatt:7.0/NRD90M/894012.12:user/release-keys
+ro.build.fingerprint=htc/HTV31_jp_kdi/htc_b3uhl:6.0.1/MMB29M/810015.1:user/release-keys
 ro.build.characteristics=default
 ro.build.description=2.44.970.1 CL810015 release-keys
 # Do not try to parse ro.build.description or .fingerprint
