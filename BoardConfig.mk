@@ -58,45 +58,6 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/htc/msm8994
 TARGET_KERNEL_CONFIG := lineageos_b3uhl_defconfig
 
-# Audio
-AUDIO_FEATURE_ENABLED_ACDB_LICENSE := true
-AUDIO_FEATURE_ENABLED_COMPRESS_VOIP := true
-AUDIO_FEATURE_ENABLED_EXTN_FORMATS := true
-AUDIO_FEATURE_ENABLED_EXTN_FLAC_DECODER := true
-AUDIO_FEATURE_ENABLED_FLUENCE := true
-AUDIO_FEATURE_ENABLED_HFP := true
-AUDIO_FEATURE_ENABLED_KPI_OPTIMIZE := true
-AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
-AUDIO_FEATURE_ENABLED_MULTIPLE_TUNNEL := true
-AUDIO_FEATURE_ENABLED_PCM_OFFLOAD := true
-AUDIO_FEATURE_ENABLED_PCM_OFFLOAD_24 := true
-AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
-AUDIO_FEATURE_ENABLED_RECORD_PLAY_CONCURRENCY := true
-AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
-BOARD_USES_ALSA_AUDIO := true
-USE_CUSTOM_AUDIO_POLICY := 1
-USE_XML_AUDIO_POLICY_CONF := 1
-
-# Bionic
-TARGET_LD_SHIM_LIBS := \
-    /system/vendor/lib/libHtcVteEngine.so|/system/lib/libshim_camera_b3uhl.so \
-    /system/vendor/lib/libizat_core.so|/system/lib/libshim_gps_b3uhl.so \
-    /system/vendor/lib64/libizat_core.so|/system/lib64/libshim_gps_b3uhl.so \
-    /system/vendor/lib64/libril.so|/system/lib64/libshim_ril_b3uhl.so
-
-# Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/b3uhl/bluetooth
-BOARD_CUSTOM_BT_CONFIG := device/htc/b3uhl/bluetooth/libbt_vndcfg.txt
-BOARD_HAVE_BLUETOOTH := true
-BOARD_HAVE_BLUETOOTH_BCM := true
-
-# Camera
-TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
-    /system/bin/cameraserver=24 \
-    /system/vendor/bin/mm-qcamera-daemon=24
-TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY := libcamera_parameters_ext_b3uhl
-USE_DEVICE_SPECIFIC_CAMERA := true
-
 # Charger
 BOARD_CHARGING_CMDLINE_NAME := "androidboot.mode"
 BOARD_CHARGING_CMDLINE_VALUE := "chargerlogo"
@@ -127,56 +88,33 @@ TARGET_FS_CONFIG_GEN := device/htc/b3uhl/config.fs
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
-# HIDL
-DEVICE_MANIFEST_FILE := device/htc/b3uhl/manifest.xml
-DEVICE_MATRIX_FILE := device/htc/b3uhl/compatibility_matrix.xml
-
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_b3uhl
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 
-# Lights
-TARGET_PROVIDES_LIBLIGHT := true
-
-# NFC
-BOARD_NFC_CHIPSET := pn547
-BOARD_NFC_HAL_SUFFIX := msm8994
-
-# Power
-TARGET_POWERHAL_VARIANT := qcom
-
-# Properties
-TARGET_SYSTEM_PROP := device/htc/b3uhl/system.prop
 
 # Qualcomm
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QC_TIME_SERVICES := true
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/htc/b3uhl/rootdir/etc/recovery.fstab
-
-# SELinux
--include device/qcom/sepolicy-legacy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += device/htc/b3uhl/sepolicy
-
-# Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \
-    device/htc/b3uhl/liblog_htc
-
-# Use Snapdragon LLVM, if available
-TARGET_USE_SDCLANG := true
-
-# Wifi
-WPA_SUPPLICANT_VERSION      := VER_0_8_X
-BOARD_WLAN_DEVICE           := bcmdhd
-BOARD_WPA_SUPPLICANT_DRIVER := NL80211
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-BOARD_HOSTAPD_DRIVER        := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB   := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/bcmdhd/parameters/firmware_path"
-WIFI_DRIVER_FW_PATH_AP      := "/system/etc/firmware/fw_bcm4356_apsta.bin"
-WIFI_DRIVER_FW_PATH_STA     := "/system/etc/firmware/fw_bcm4356.bin"
+BOARD_SUPPRESS_SECURE_ERASE := true
 
 # inherit from the proprietary version
 -include vendor/htc/b3uhl/BoardConfigVendor.mk
 
+# TWRP specific build flags
+RECOVERY_VARIANT := twrp
+TW_THEME := portrait_hdpi
+RECOVERY_SDCARD_ON_DATA := true
+BOARD_HAS_NO_REAL_SDCARD := true
+TW_HAS_DOWNLOAD_MODE := true
+#TW_INCLUDE_CRYPTO := true
+TW_NO_EXFAT_FUSE := true
+#TARGET_RECOVERY_DEVICE_MODULES := twrpdec
+#TW_RECOVERY_ADDITIONAL_RELINK_FILES := $(OUT)/recovery/root/sbin/twrpdec
+#TARGET_USES_LOGD := true
+#TWRP_INCLUDE_LOGCAT := true
+TW_INTERNAL_STORAGE_PATH := "/data/media/0"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
