@@ -47,7 +47,7 @@ TARGET_NO_BOOTLOADER := true
 # Kernel
 BOARD_DTBTOOL_ARGS := -2
 BOARD_KERNEL_BASE := 0x00078000
-BOARD_KERNEL_CMDLINE := console=none androidboot.hardware=b3uhl user_debug=31 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-5 androidkey.dummy=1 androidusb.pid=0x065e
+BOARD_KERNEL_CMDLINE := console=none androidboot.hardware=b3uhl user_debug=31 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-5 androidkey.dummy=1 androidusb.pid=0x065e  androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DT := true
@@ -97,24 +97,28 @@ BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QC_TIME_SERVICES := true
 
 # Recovery
+TARGET_RECOVERY_FSTAB := device/htc/b3uhl/twrp.fstab
 BOARD_SUPPRESS_SECURE_ERASE := true
 
 # inherit from the proprietary version
 -include vendor/htc/b3uhl/BoardConfigVendor.mk
 
 # TWRP specific build flags
-RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
-BOARD_HAS_NO_REAL_SDCARD := true
+TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
+TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
+TW_MAX_BRIGHTNESS := 25500
+TW_DEFAULT_BRIGHTNESS := 15300
+TW_Y_OFFSET := 142
+TW_H_OFFSET := -142
+TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
-#TW_INCLUDE_CRYPTO := true
-TW_NO_EXFAT_FUSE := true
-#TARGET_RECOVERY_DEVICE_MODULES := twrpdec
-#TW_RECOVERY_ADDITIONAL_RELINK_FILES := $(OUT)/recovery/root/sbin/twrpdec
-#TARGET_USES_LOGD := true
-#TWRP_INCLUDE_LOGCAT := true
-TW_INTERNAL_STORAGE_PATH := "/data/media/0"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
-TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_INCLUDE_NTFS_3G := true
+TW_EXCLUDE_SUPERSU := true
+TW_EXTRA_LANGUAGES := true
+TW_USE_NEW_MINADBD := true
+TW_USE_TOOLBOX := true
+TW_EXCLUDE_TWRPAPP := true
+TW_NO_LEGACY_PROPS := true
+BOARD_SUPPRESS_SECURE_ERASE := true
